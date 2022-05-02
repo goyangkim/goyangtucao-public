@@ -29,7 +29,7 @@
     <main id="app">
         <aside>
             <p id="describe">
-                可以在这里简单介绍你自己
+                欢迎来到与高阳俱乐部与众不同的高阳吐槽
             </p>
         </aside>
         <section class="item" v-for="item in contents" v-cloak>
@@ -84,7 +84,7 @@
             return;
         }
 
-        let count = 10;
+        let count = 6;
         for (let i = 0; i < count && app.all_ids.length > 0; i++) {
             let id = app.all_ids.pop()
             let parsedItem = (await axios.get(app.backend_url + "/tucao/" + id.toString())).data;
